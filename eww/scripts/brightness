@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$1" == "up" ]; then
+    brightnessctl -q s +5%
+elif [ "$1" == "down" ]; then
+    brightnessctl -q s 5%-
+fi
+
+brightness=$(($(brightnessctl -q g) * 100 / 255))
+eww update brightness=$brightness

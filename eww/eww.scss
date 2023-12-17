@@ -1,0 +1,63 @@
+* { all: unset }
+
+.main {
+    background-color: #21262c;
+    color: white;
+    border-bottom: #157567 solid 3px;
+}
+
+.metric {
+    margin: 4px;
+}
+
+.icon {
+    background-color: #31363c;
+    padding: 4px 10px 4px 8px;
+    border-radius: 10 0 0 10;
+    font-family: 'JetBrainsMonoNL NF';
+}
+
+.info {
+    background-color: #40454b;
+    padding: 4px 6px;
+    border-radius: 0 10 10 0;
+    font-family: 'JetBrainsMonoNL NF';
+}
+
+.arch {
+    background-color: #157567;
+    padding: 0px 15px 0px 8px;
+    border-radius: 0 10 0 0;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 0;
+}
+
+
+.exit {
+  padding: 0px 8px 0px 7px;
+  margin: 5px;
+  border-radius: 20px;
+  border: 0;
+  background-color: rgb(218, 53, 53);
+  font-family: 'JetBrainsMonoNL NF';
+  font-size: larger;
+}
+
+.powermenubg {
+    background: rgba(0,0,0,0.5);
+    border: #0f5248 solid 2px;
+}
+
+.powermenufg {
+    background-color: #242424;
+    border: #6d6d6d solid 2px;
+    padding: 20px 10px;
+}
+
+.powerbtn {
+    background-color: rgb(255, 115, 0);
+    border-radius: 15%;
+    margin: 0 10px;
+    font-size: 35px;
+}
