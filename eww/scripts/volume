@@ -1,0 +1,25 @@
+#!/bin/python
+
+import sys
+import subprocess
+
+
+def main():
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "up":
+            if float(subprocess.check_output(["wpctl", "get-volume", "@DEFAULT_AUDIO_SINK@"]).decode('utf-8')[7:]) < 2:
+                subprocess.run(["wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05+"])
+        elif sys.argv[1] == "down":
+            subprocess.run(["wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-"])
+
+    
+    volume = percentage(float(subprocess.check_output(["wpctl", "get-volume", "@DEFAULT_AUDIO_SINK@"]).decode('utf-8')[7:]))
+    subprocess.run(["eww", "update", f"volume={volume}"])
+
+
+def percentage(num):
+    return int(num * 100)
+
+
+if __name__ == "__main__":
+    main()
