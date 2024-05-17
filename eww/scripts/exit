@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm blur.jpg
+grim -t jpeg screen.jpg
+# ffmpeg -i screen.jpg -vf "[in]  crop=1920:1043:0:50 [cropped]; [cropped] smartblur=lr=5:ls=1 [out]" blur.jpg
+ffmpeg -i screen.jpg -vf "[in]  crop=1920:1043:0:50 [cropped]; [cropped] boxblur=10:2 [out]" blur.jpg
